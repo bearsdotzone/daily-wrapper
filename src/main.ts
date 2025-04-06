@@ -4,14 +4,16 @@ import {
   drink,
   itemAmount,
   myAdventures,
+  print,
   pvpAttacksLeft,
   retrieveItem,
   setProperty,
+  Skill,
   toJson,
   useSkill,
 } from "kolmafia";
 import { Engine, Task } from "grimoire-kolmafia";
-import { $effect, $item, $skill, getAcquirePrice, getRemainingLiver, set } from "libram";
+import { $effect, $item, getAcquirePrice, getRemainingLiver, set } from "libram";
 import { getRafflePrizes } from "libram/dist/resources/evergreen/Raffle";
 
 const TaskUpdateScripts: Task = {
@@ -108,7 +110,7 @@ const TaskDoPajamas: Task = {
   do: () => {},
   outfit: { modifier: "adv, 0.3 pvp fights -tie" },
   limit: { skip: 1 },
-  prepare: () => useSkill(1, $skill`Aug. 13th: Left/Off Hander's Day!`),
+  prepare: () => useSkill(1, Skill.get(7464)),
 };
 
 export function main(): void {
