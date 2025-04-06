@@ -138,16 +138,6 @@ export function main(): void {
   if (errors.length > 0) {
     bufferToFile(JSON.stringify({ content: errors }), "output.txt");
   }
-  const wishList = [$item`Libram of Resolutions`];
-  const test = new RegExp(
-    `First Prize:</td><td><img class=\"hand\" onclick=\"descitem\\((\\d+)\\)`
-  ).exec(visitUrl("raffle.php"));
-  print(test?.pop());
-  print(
-    new RegExp(`Second Prize:</td><td><img class=\"hand\" onclick='descitem\\((\\d+)\\)`)
-      .exec(visitUrl("raffle.php"))
-      ?.pop()
-  );
 
   cliExecute("exit");
 }
