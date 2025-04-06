@@ -138,7 +138,7 @@ export function main(): void {
     bufferToFile(JSON.stringify({ content: errors }), "output.txt");
   }
   const wishList = [$item`Libram of Resolutions`];
-  print(getRafflePrizes().toString());
+  print(getRafflePrizes()[0].toString());
 
   cliExecute("exit");
 }
