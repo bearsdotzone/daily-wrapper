@@ -3,9 +3,10 @@ curl -fLsgo kolmafia.jar $(curl -fsg 'https://api.github.com/repos/kolmafia/kolm
 echo "saveState\nsaveState.bearsdotzone=$KOL_SAVESTATE\nsaveStateActive=true" > /root/.kolmafia/settings/GLOBAL_prefs.txt
 git clone https://github.com/bearsdotzone/daily-wrapper.git
 cd /daily-wrapper || return
-npm install yarn
+npm install -g yarn
 yarn install
 yarn build
+mkdir -p /root/.kolmafia/scripts/
 cp KoLmafia/scripts/daily-wrapper/main-script-name.js /root/.kolmafia/scripts/daily.js
 cd /
 java -jar kolmafia.jar --CLI /root/.kolmafia/scripts/daily.js
