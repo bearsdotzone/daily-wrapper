@@ -11,6 +11,7 @@ import {
   Skill,
   toJson,
   useSkill,
+  visitUrl,
 } from "kolmafia";
 import { Engine, Task } from "grimoire-kolmafia";
 import { $effect, $item, AugustScepter, getAcquirePrice, getRemainingLiver, set } from "libram";
@@ -138,7 +139,15 @@ export function main(): void {
     bufferToFile(JSON.stringify({ content: errors }), "output.txt");
   }
   const wishList = [$item`Libram of Resolutions`];
-  print(getRafflePrizes()[0].toString());
+  const test = new RegExp(
+    `First Prize:</td><td><img class=hand onclick='descitem\\((\\d+)\\)`
+  ).exec(visitUrl("raffle.php"));
+  print(test?.pop());
+  print(
+    new RegExp(`Second Prize:</td><td><img class=hand onclick='descitem\\((\\d+)\\)`)
+      .exec(visitUrl("raffle.php"))
+      ?.pop()
+  );
 
   cliExecute("exit");
 }
