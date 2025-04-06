@@ -134,6 +134,6 @@ export function main(): void {
   if (errors.length > 0) {
     bufferToFile(JSON.stringify({ content: errors }), "output.txt");
   }
-  getRafflePrizes();
+  if ($item`Libram of Resolutions`.id in getRafflePrizes()) print("Hey!");
   cliExecute("exit");
 }
