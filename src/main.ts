@@ -137,7 +137,8 @@ export function main(): void {
   if (errors.length > 0) {
     bufferToFile(JSON.stringify({ content: errors }), "output.txt");
   }
-  if (getRafflePrizes().find((x) => x.id === $item`Libram of Resolutions`.id)) print("Hey!");
+  const wishList = [$item`Libram of Resolutions`];
+  print(getRafflePrizes().toString());
 
   cliExecute("exit");
 }
