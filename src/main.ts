@@ -140,11 +140,11 @@ export function main(): void {
   }
   const wishList = [$item`Libram of Resolutions`];
   const test = new RegExp(
-    `First Prize:</td><td><img class=hand onclick='descitem\\((\\d+)\\)`
+    `First Prize:</td><td><img class=\"hand\" onclick=\"descitem\\((\\d+)\\)`
   ).exec(visitUrl("raffle.php"));
   print(test?.pop());
   print(
-    new RegExp(`Second Prize:</td><td><img class=hand onclick='descitem\\((\\d+)\\)`)
+    new RegExp(`Second Prize:</td><td><img class=\"hand\" onclick='descitem\\((\\d+)\\)`)
       .exec(visitUrl("raffle.php"))
       ?.pop()
   );
