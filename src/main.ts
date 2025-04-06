@@ -13,8 +13,9 @@ import {
   useSkill,
 } from "kolmafia";
 import { Engine, Task } from "grimoire-kolmafia";
-import { $effect, $item, getAcquirePrice, getRemainingLiver, set } from "libram";
+import { $effect, $item, AugustScepter, getAcquirePrice, getRemainingLiver, set } from "libram";
 import { getRafflePrizes } from "libram/dist/resources/evergreen/Raffle";
+import { canCast } from "libram/dist/resources/2023/AugustScepter";
 
 const TaskUpdateScripts: Task = {
   name: "Update scripts",
@@ -110,7 +111,9 @@ const TaskDoPajamas: Task = {
   do: () => {},
   outfit: { modifier: "adv, 0.3 pvp fights -tie" },
   limit: { skip: 1 },
-  prepare: () => useSkill(1, Skill.get(7464)),
+  prepare: () => {
+    if (AugustScepter.canCast(13)) useSkill(<Skill>AugustScepter.SKILLS.at(13));
+  },
 };
 
 export function main(): void {
@@ -135,5 +138,6 @@ export function main(): void {
     bufferToFile(JSON.stringify({ content: errors }), "output.txt");
   }
   if ($item`Libram of Resolutions`.id in getRafflePrizes()) print("Hey!");
+
   cliExecute("exit");
 }
