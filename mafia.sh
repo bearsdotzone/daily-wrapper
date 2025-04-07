@@ -1,5 +1,6 @@
 #!/bin/sh
 curl -fLsgo kolmafia.jar $(curl -fsg 'https://api.github.com/repos/kolmafia/kolmafia/releases/latest' | jq -r '.assets[] | select(.browser_download_url | contains(".jar")).browser_download_url')
+mkdir -p /root/.kolmafia/settings/
 echo "saveState\nsaveState.bearsdotzone=$KOL_SAVESTATE\nsaveStateActive=true" > /root/.kolmafia/settings/GLOBAL_prefs.txt
 git clone https://github.com/bearsdotzone/daily-wrapper.git
 cd /daily-wrapper || return
