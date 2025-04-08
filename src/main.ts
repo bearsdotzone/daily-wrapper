@@ -92,8 +92,6 @@ const TaskDoGarbo: Task = {
     setProperty("valueOfAdventure", "3501");
     setProperty("garboDisallowIceHouseNotify", "true");
     setProperty("garbo_autoUserConfirm", "true");
-    setProperty("choiceAdventure1065", "3");
-    setProperty("choiceAdventure546", "12");
   },
   limit: { skip: 5 },
 };
@@ -119,6 +117,10 @@ const TaskDoPajamas: Task = {
 
 export function main(): void {
   cliExecute("login bearsdotzone");
+
+  setProperty("choiceAdventure1065", "3");
+  setProperty("choiceAdventure546", "12");
+  setProperty("choiceAdventure1201", "2");
 
   const engine = new Engine([
     TaskUpdateScripts,
