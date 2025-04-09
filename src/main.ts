@@ -121,6 +121,7 @@ export function main(): void {
   setProperty("choiceAdventure1065", "3");
   setProperty("choiceAdventure546", "12");
   setProperty("choiceAdventure1201", "2");
+  setProperty("_eldritchTentaclesFoughtToday", "11");
 
   const engine = new Engine([
     TaskUpdateScripts,
