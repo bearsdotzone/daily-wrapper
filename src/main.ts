@@ -2,6 +2,7 @@ import {
   bufferToFile,
   cliExecute,
   drink,
+  getProperty,
   itemAmount,
   myAdventures,
   print,
@@ -13,7 +14,7 @@ import {
   useSkill,
   visitUrl,
 } from "kolmafia";
-import { Engine, Task } from "grimoire-kolmafia";
+import { Engine, Guards, Task } from "grimoire-kolmafia";
 import { $effect, $item, AugustScepter, getAcquirePrice, getRemainingLiver, set } from "libram";
 import { getRafflePrizes } from "libram/dist/resources/evergreen/Raffle";
 import { canCast } from "libram/dist/resources/2023/AugustScepter";
@@ -121,7 +122,7 @@ export function main(): void {
   setProperty("choiceAdventure1065", "3");
   setProperty("choiceAdventure546", "12");
   setProperty("choiceAdventure1201", "2");
-  setProperty("_eldritchTentaclesFoughtToday", "11");
+  setProperty("_eldritchTentacleFought", "true");
 
   const engine = new Engine([
     TaskUpdateScripts,
