@@ -116,6 +116,15 @@ const TaskDoPajamas: Task = {
   },
 };
 
+const TaskDoRaffle: Task = {
+  name: "Do raffle",
+  completed: () => itemAmount($item`raffle ticket`) >= 1,
+  do: () => {
+    cliExecute("raffle 1");
+  },
+  limit: { skip: 1 },
+};
+
 export function main(): void {
   cliExecute("login bearsdotzone");
 
@@ -132,6 +141,7 @@ export function main(): void {
     TaskDoGarbo,
     TaskDoOverdrink,
     TaskDoPajamas,
+    TaskDoRaffle,
   ]);
   engine.run();
 
