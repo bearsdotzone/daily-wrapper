@@ -125,6 +125,15 @@ const TaskDoRaffle: Task = {
   limit: { skip: 1 },
 };
 
+const TaskDoGarden: Task = {
+  name: "Do garden",
+  completed: () => false,
+  do: () => {
+    cliExecute("garden pick");
+  },
+  limit: { skip: 1 },
+};
+
 export function main(): void {
   cliExecute("login bearsdotzone");
 
@@ -142,6 +151,7 @@ export function main(): void {
     TaskDoOverdrink,
     TaskDoPajamas,
     TaskDoRaffle,
+    TaskDoGarden,
   ]);
   engine.run();
 
