@@ -26,6 +26,7 @@ const TaskUpdateScripts: Task = {
     cliExecute("git checkout loathers/garbage-collector.git release");
     cliExecute("git checkout https://github.com/Pantocyclus/PVP_MAB.git release");
     cliExecute("git checkout bearsdotzone/CONSUME.ash dev");
+    cliExecute("git checkout loathers/bountiful");
     cliExecute("git update");
   },
   limit: { skip: 1 },
@@ -108,7 +109,7 @@ const TaskDoOverdrink: Task = {
 const TaskDoPajamas: Task = {
   name: "Do pajamas",
   completed: () => false,
-  do: () => {},
+  do: () => { },
   outfit: { modifier: "adv, 0.3 pvp fights -tie" },
   limit: { skip: 1 },
   prepare: () => {
