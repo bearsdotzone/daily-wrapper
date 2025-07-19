@@ -1,6 +1,6 @@
 `docker build -t mafia .`
 
-`docker run --env-file ~/.kolmafia/.env --name mafia --rm -it mafia` Drop -it for cron
+`docker run --env-file /home/bears/.kolmafia/.env --name mafia --rm -it mafia` Drop -it for cron
 
 # DEVELOPING FOR MAFIA IN TYPESCRIPT (TS)
 
