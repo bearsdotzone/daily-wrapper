@@ -26,7 +26,7 @@ const TaskUpdateScripts: Task = {
     cliExecute("git checkout loathers/garbage-collector.git release");
     cliExecute("git checkout https://github.com/Pantocyclus/PVP_MAB.git release");
     cliExecute("git checkout bearsdotzone/CONSUME.ash dev");
-    cliExecute("git checkout loathers/bountiful");
+    cliExecute("git checkout bearsdotzone/bountiful");
     cliExecute("git update");
   },
   limit: { skip: 1 },
