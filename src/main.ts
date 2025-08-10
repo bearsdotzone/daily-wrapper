@@ -65,6 +65,7 @@ const TaskDoBounties: Task = {
     setProperty("bountiful.useBanisher", "true");
     setProperty("bountiful.useCopier", "true");
     setProperty("bountiful.useFax", "true");
+    setProperty("bountiful.maxSpecialCost", "-1");
   },
   limit: { skip: 1 },
 };
