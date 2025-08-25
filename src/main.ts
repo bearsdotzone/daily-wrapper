@@ -86,6 +86,8 @@ const TaskDoGarbo: Task = {
       garboString += ' target="pumpkin spice wraith"';
     } else if (itemAmount($item`snowman-enchanting tophat`) < 2) {
       garboString += ' target="magically-animated snowman"';
+    } else {
+      garboString += ' target="section 11"';
     }
 
     cliExecute(garboString);
