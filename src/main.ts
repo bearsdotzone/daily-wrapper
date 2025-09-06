@@ -13,6 +13,7 @@ import {
   toJson,
   useSkill,
   visitUrl,
+  myName
 } from "kolmafia";
 import { Engine, Guards, Task } from "grimoire-kolmafia";
 import { $effect, $item, AugustScepter, getAcquirePrice, getRemainingLiver, set } from "libram";
@@ -126,6 +127,7 @@ const TaskDoRaffle: Task = {
   do: () => {
     cliExecute("raffle 1");
   },
+  ready: () => myName().endsWith('zone'),
   limit: { skip: 1 },
 };
 
