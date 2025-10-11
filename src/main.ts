@@ -1,24 +1,20 @@
+import { Engine, Task } from "grimoire-kolmafia";
 import {
   bufferToFile,
+  buy,
   cliExecute,
   drink,
-  getProperty,
   itemAmount,
   myAdventures,
-  print,
+  myName,
   pvpAttacksLeft,
   retrieveItem,
   setProperty,
   Skill,
-  toJson,
-  useSkill,
-  visitUrl,
-  myName
+  use,
+  useSkill
 } from "kolmafia";
-import { Engine, Guards, Task } from "grimoire-kolmafia";
-import { $effect, $item, AugustScepter, getAcquirePrice, getRemainingLiver, set } from "libram";
-import { getRafflePrizes } from "libram/dist/resources/evergreen/Raffle";
-import { canCast } from "libram/dist/resources/2023/AugustScepter";
+import { $coinmaster, $effect, $item, AugustScepter, getAcquirePrice, getRemainingLiver } from "libram";
 
 const TaskUpdateScripts: Task = {
   name: "Update scripts",
