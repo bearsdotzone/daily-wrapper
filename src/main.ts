@@ -138,7 +138,7 @@ const TaskDoGarden: Task = {
 
 const TaskDoNellyville: Task = {
   name: "Do nellyville",
-  completed: () => $coinmaster`Mr. Store 2002`.availableTokens == 0,
+  completed: () => $coinmaster`Mr. Store 2002`.availableTokens === 0 || $coinmaster`Mr. Store 2002`.availableTokens === undefined,
   do: () => {
     buy($coinmaster`Mr. Store 2002`, 3, $item`Charter: Nellyville`);
     use($item`Charter: Nellyville`, 3);
