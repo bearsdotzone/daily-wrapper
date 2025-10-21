@@ -148,6 +148,7 @@ const TaskDoNellyville: Task = {
 
 export function main(): void {
   cliExecute("login bearsdotzone");
+  cliExecute("hermit 3 clover");
 
   setProperty("choiceAdventure1065", "3");
   setProperty("choiceAdventure546", "12");
