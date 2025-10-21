@@ -143,7 +143,6 @@ const TaskDoNellyville: Task = {
     buy($coinmaster`Mr. Store 2002`, 3, $item`Charter: Nellyville`);
     use($item`Charter: Nellyville`, 3);
   },
-  limit: { skip: 1 },
 };
 
 export function main(): void {
