@@ -136,19 +136,12 @@ const TaskDoGarden: Task = {
   limit: { skip: 1 },
 };
 
-const TaskDoNellyville: Task = {
-  name: "Do nellyville",
-  completed: () => $coinmaster`Mr. Store 2002`.availableTokens === 0 || $coinmaster`Mr. Store 2002`.availableTokens === undefined,
-  do: () => {
-    buy($coinmaster`Mr. Store 2002`, 3, $item`Charter: Nellyville`);
-    use($item`Charter: Nellyville`, 3);
-  },
-  limit: { skip: 1 },
-};
-
 export function main(): void {
   cliExecute("login bearsdotzone");
   cliExecute("hermit 3 clover");
+
+  cliExecute("coinmaster buy 2002 3 nellyville");
+  cliExecute("use 3 Charter: Nellyville");
 
   setProperty("choiceAdventure1065", "3");
   setProperty("choiceAdventure546", "12");
@@ -160,7 +153,6 @@ export function main(): void {
     TaskDoPVP,
     TaskDoDiet,
     TaskDoBounties,
-    TaskDoNellyville,
     TaskDoGarbo,
     TaskDoOverdrink,
     TaskDoPajamas,
