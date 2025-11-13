@@ -91,7 +91,7 @@ const TaskDoGarbo: Task = {
   },
   prepare: () => {
     setProperty("garbo_vipClan", "90485");
-    setProperty("valueOfAdventure", "3501");
+    setProperty("valueOfAdventure", "3750");
     setProperty("garboDisallowIceHouseNotify", "true");
     setProperty("garbo_autoUserConfirm", "true");
   },
