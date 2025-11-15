@@ -68,6 +68,7 @@ const TaskDoBounties: Task = {
 };
 
 // Consider adding crimbo targets
+// giant potato for potato jacket
 // moai for moaiball
 // section 11 for cmoi (tough fight)
 // pumpkin spice wraith for pumpkin spice whorl
@@ -84,7 +85,8 @@ const TaskDoGarbo: Task = {
     } else if (itemAmount($item`snowman-enchanting tophat`) < 2) {
       garboString += ' target="magically-animated snowman"';
     } else {
-      garboString += ' target="section 11"';
+      garboString += ' target="pumpkin spice wraith"';
+      // garboString += ' target="section 11"';
     }
 
     cliExecute(garboString);
