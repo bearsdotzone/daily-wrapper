@@ -96,6 +96,7 @@ const TaskDoGarbo: Task = {
     setProperty("valueOfAdventure", "3750");
     setProperty("garboDisallowIceHouseNotify", "true");
     setProperty("garbo_autoUserConfirm", "true");
+    setProperty("garbo_fightGlitch", "true");
   },
   limit: { skip: 5 },
 };
