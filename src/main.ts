@@ -97,6 +97,7 @@ const TaskDoGarbo: Task = {
     setProperty("garboDisallowIceHouseNotify", "true");
     setProperty("garbo_autoUserConfirm", "true");
     setProperty("garbo_fightGlitch", "true");
+    setProperty("garbo_buyPass", "true");
   },
   limit: { skip: 5 },
 };
